@@ -1,0 +1,106 @@
+body {
+  font-family: sans-serif;
+  padding: 30px;
+}
+
+.card {
+  padding: 20px;
+  background: #b9a9a9;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 13px 20px;
+  outline: none;
+  border: 0 none;
+  background: #000;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(36, 36, 36);
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo * {
+  margin: 0 4px;
+}
+
+.todo input[type="text"],
+.todo p {
+  flex: 1;
+}
+.todo input[type="text"] {
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  font-size: 16px;
+  height: 14px;
+  outline: none;
+}
+
+.todo p {
+  font-size: 16px;
+  padding: 15px;
+}
+
+.todo button {
+  background: none;
+  color: red;
+  border: 1px solid red;
+  display: none;
+}
+
+.todo button:hover {
+  background: red;
+  color: #fff;
+}
+
+.todo:hover button {
+  display: block;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  position: relative;
+  background-color: #bada55;
+  color: #111;
+  height: 45px;
+  width: 45px;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="checkbox"]:checked::before {
+  position: absolute;
+  font: 22px/1 "Open Sans", sans-serif;
+  left: 16px;
+  top: 8px;
+  content: "\02143";
+  transform: rotate(40deg);
+}
+
+input[type="checkbox"]:hover {
+  background-color: #a9c54c;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #a9c54c;
+}
+
+input[type="checkbox"]:checked + p {
+  text-decoration: line-through;
+}
